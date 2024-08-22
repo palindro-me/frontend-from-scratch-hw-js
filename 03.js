@@ -5,12 +5,15 @@
 */
 
 // your code
-let sum = 1;
-i = 5 % 2;
+let sum = 0;
+i = 1;
 while (i < 20) {
-  sum = sum + 2;
-  i++;
-}
+  if(i % 2 > 0) {
+    sum +=i;
+  }
+      i++;
+  }
+
 
 console.log(sum);
 
