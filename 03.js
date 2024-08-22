@@ -8,7 +8,7 @@
 let sum = 1;
 i = 5 % 2;
 while (i < 20) {
-  sum = sum +6 % 3;
+  sum = sum + 2;
   i++;
 }
 
