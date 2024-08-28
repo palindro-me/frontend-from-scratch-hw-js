@@ -22,8 +22,8 @@ if (isWinningDouble) {
 */
 
 
-  dice1 = Math.floor(Math.random() * 6);
-  dice2 = Math.floor(Math.random() * 6);
+  dice1 = Math.floor(Math.random() * 6) + 1;
+  dice2 = Math.floor(Math.random() * 6) + 1;
   isWinningDouble = (dice1 === dice2) && dice1 > 3 && dice2 > 3
 
   
