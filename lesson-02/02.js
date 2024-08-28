@@ -20,3 +20,19 @@ if (isWinningDouble) {
   console.log('Не выигрышный дубль.')
 }
 */
+
+
+  dice1 = Math.floor(Math.random() * 6);
+  dice2 = Math.floor(Math.random() * 6);
+  isWinningDouble = (dice1 === dice2) && dice1 > 3 && dice2 > 3
+
+  
+    console.log('Первый бросок: ' + dice1)
+    console.log('Второй бросок: ' + dice2)
+    if (isWinningDouble) {
+      console.log('Выигрышный дубль!')
+      isWinningDouble = true;
+    } else {
+      console.log('Не выигрышный дубль.')
+    }
+
