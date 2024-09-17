@@ -26,6 +26,7 @@ function findCommonElements(array1, array2) {
                 commonArray.push(array1[i])
             }
         }
-        return commonArray
+     
     }
-}
+       return commonArray
+}git 
