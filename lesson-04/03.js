@@ -29,4 +29,4 @@ function findCommonElements(array1, array2) {
      
     }
        return commonArray
-}git 
+}
