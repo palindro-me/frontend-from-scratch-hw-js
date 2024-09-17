@@ -19,7 +19,7 @@ function includesElement(array, element) {
             console.log(false);
             i++;
         } else {
-            console.log(false)
+            console.log(true)
         }
     }
 }
