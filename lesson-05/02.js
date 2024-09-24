@@ -36,10 +36,5 @@ const gallery = {
 }
 
 function updateGallery(gallery, art, newArt) {
-  if(art in gallery) {
-    console.log(this.gallery)
-  } else {
-    this.gallery[art] = newArt;
-    console.log(this.gallery)
-  }
+ gallery[art] = newArt
 }
