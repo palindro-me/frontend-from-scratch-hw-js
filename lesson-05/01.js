@@ -20,6 +20,9 @@ const game = {
       game.resources[gold] += amount;
     } else if (resource === 'lumber') {
      game.resources[lumber] += amount
+    } else {
+      console.log('Invalid resource');
+      
     }
   }
 }
