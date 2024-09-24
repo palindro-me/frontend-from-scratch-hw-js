@@ -36,8 +36,8 @@ const gallery = {
 }
 
 function updateGallery(gallery, key, parameter) {
-  if(key in gallery) {
-    gallery.key.parameter
+  if(key in this.gallery) {
+    this.gallery.key.parameter
   } else {
     gallery.key
   }
