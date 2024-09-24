@@ -35,10 +35,11 @@ const gallery = {
   'The Scream': 'Edvard Munch',
 }
 
-function updateGallery(gallery, key, parameter) {
-  if(key in this.gallery) {
-    this.gallery.key.parameter
+function updateGallery(gallery, art, newArt) {
+  if(art in gallery) {
+    console.log(this.gallery)
   } else {
-    gallery.key
+    this.gallery[art] = newArt;
+    console.log(this.gallery)
   }
 }
