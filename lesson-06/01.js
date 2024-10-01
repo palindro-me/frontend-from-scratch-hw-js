@@ -38,8 +38,8 @@ changeImg()
 
 nextButton.addEventListener('click', function() {
   index++;
-  if (index >= WEB_TECH_IMAGES.length) {
-    index = WEB_TECH_IMAGES[0]
+  if(index >= WEB_TECH_IMAGES.length) {
+    index = 0;
   }
   changeImg()
 })
