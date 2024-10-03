@@ -14,7 +14,7 @@ function truncate(str, maxLength) {
 let result = ''
 
 if(str.length > maxLength) {
- result = str.slice(0, maxLength - 3) + '...'
+ result = str.slice(0, maxLength) + '...'
 } else {
   result = str;
 }
