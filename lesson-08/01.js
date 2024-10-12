@@ -14,19 +14,54 @@
   🧙 Подсказка: если пользователь кликнет по кнопке с питомцев, id питомца можно будет получить из объекта события (event.target.id)
 */
 
-const PETS = [
-  { id: 'cat', title: '🐱' },
-  { id: 'dog', title: '🐶' },
-  { id: 'parrot', title: '🦜' },
-  { id: 'fish', title: '🐠' },
-  { id: 'spider', title: '🕷' },
-  { id: 'snake', title: '🐍' },
-  { id: 'hamster', title: '🐹' },
-  { id: 'turtle', title: '🐢' },
-  { id: 'chinchilla', title: '🦇' },
-  { id: 'hedgehog', title: '🦔' },
-  { id: 'rat', title: '🐀' },
-  { id: 'frog', title: '🐸' },
+const PETS = [{
+    id: 'cat',
+    title: '🐱'
+  },
+  {
+    id: 'dog',
+    title: '🐶'
+  },
+  {
+    id: 'parrot',
+    title: '🦜'
+  },
+  {
+    id: 'fish',
+    title: '🐠'
+  },
+  {
+    id: 'spider',
+    title: '🕷'
+  },
+  {
+    id: 'snake',
+    title: '🐍'
+  },
+  {
+    id: 'hamster',
+    title: '🐹'
+  },
+  {
+    id: 'turtle',
+    title: '🐢'
+  },
+  {
+    id: 'chinchilla',
+    title: '🦇'
+  },
+  {
+    id: 'hedgehog',
+    title: '🦔'
+  },
+  {
+    id: 'rat',
+    title: '🐀'
+  },
+  {
+    id: 'frog',
+    title: '🐸'
+  },
 ]
 
 const cart = []
@@ -62,21 +97,26 @@ function updateCartDisplay() {
   }
 }
 
+
+
 clearCartButton.addEventListener('click', function () {
   cart.length = 0
   updateCartDisplay()
 })
 
 // Твой код:
+// Обработчик событий для добавления питомцев в корзину
 petShop.addEventListener('click', function (event) {
+  // Проверяем, был ли клик по кнопке с классом 'pet'
   if (event.target.classList.contains('pet')) {
-    const petId = event.target.id;
+    const petId = event.target.id; // Получаем id питомца из элемента, на который кликнули
 
+    // Проверяем, можно ли добавить питомца в корзину (не более 3)
     if (cart.length < 3) {
-      cart.push(petId);
-      updateCartDisplay();
+      cart.push(petId); // Добавляем id питомца в массив cart
+      updateCartDisplay(); // Обновляем отображение корзины
     } else {
-      messageBox.textContent = 'Вы не можете добавить более 3 питомцев';
+      messageBox.textContent = 'Вы не можете добавить более 3 питомцев'; // Выводим сообщение, если превышен лимит
     }
   }
 });
