@@ -33,11 +33,36 @@ let isTimerStarted = false
 let timerId
 
 startButton.addEventListener('click', () => {
-  let counter = 3
 
   // your code
+ // Проверяем, запущен ли таймер
+ if (isTimerStarted) return; // Если да, выходим из функции
+
+ let countdown = 3; // Начальное значение счётчика
+ countdownDisplay.textContent = countdown; // Отображаем начальное значение
+
+ isTimerStarted = true; // Устанавливаем флаг, что таймер запущен
+
+ // Запускаем таймер
+ timerId = setInterval(() => {
+   countdown--; // Уменьшаем счётчик на 1
+   countdownDisplay.textContent = countdown; // Обновляем отображение
+
+   // Проверяем, достигли ли мы нуля
+   if (countdown === 0) {
+     countdownDisplay.textContent = '🚀'; // Показываем эмодзи ракеты
+     clearInterval(timerId); // Очищаем таймер
+     isTimerStarted = false; // Сбрасываем флаг
+   }
+ }, 1000); // Интервал 1 секунда
+
 })
 
 cancelButton.addEventListener('click', () => {
   // your code
+      if (!isTimerStarted) return; // Если таймер не запущен, ничего не делаем
+
+      clearInterval(timerId); // Очищаем таймер
+      countdownDisplay.textContent = 'Отменено'; // Показываем сообщение об отмене
+      isTimerStarted = false; // Сбрасываем флаг
 })
